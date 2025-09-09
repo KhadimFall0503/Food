@@ -12,7 +12,7 @@ function Footer() {
           </h3>
           <p className="mb-2">Burger House</p>
           <p className="mb-2">Dakar, Sénégal</p>
-          <p className="mb-2">Téléphone : +221 77 123 45 67</p>
+          <p className="mb-2">Téléphone : +221 77 345 79 34</p>
           <p>Email : contact@burgerhouse.sn</p>
         </div>
 
