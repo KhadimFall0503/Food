@@ -43,13 +43,6 @@ function Hero() {
             alt="Burger"
             className="w-[24rem] md:w-[36rem] lg:w-[44rem] h-auto drop-shadow-2xl relative z-10"
           />
-
-          <div className="absolute bottom-2 right-2 md:bottom-6 md:right-6 bg-red-600 text-white rounded-full px-4 py-2 md:px-6 md:py-4 font-bold text-base md:text-lg shadow-lg text-center z-20">
-            Dès 2500 F CFA <br />
-            <span className="text-xs md:text-sm font-normal">
-              prix abordables
-            </span>
-          </div>
         </div>
       </div>
     </div>

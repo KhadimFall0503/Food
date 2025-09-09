@@ -12,7 +12,7 @@ function Navbar() {
   }, [showMobileMenu]);
 
   return (
-    <nav className="absolute w-full z-20 top-0 left-0 bg-transparent">
+    <nav className="absolute w-full top-0 left-0 z-50 bg-transparent">
       <div className="container mx-auto flex justify-between items-center py-4 px-6 md:px-20 lg:px-32">
         {/* Logo */}
         <div className="flex items-center gap-3">
@@ -23,18 +23,17 @@ function Navbar() {
           />
         </div>
 
-        {/* Desktop texte + boutons */}
+        {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-6 ml-auto">
-          <p className="text-[#3d2514] font-medium text-lg"></p>
           <button className="px-5 py-2 rounded-full bg-[#3d2514] text-white font-semibold hover:bg-amber-500 hover:text-black transition">
             Connexion
           </button>
-          <button className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-black hover:text-white transition">
+          <button className="px-5 py-2 rounded-full bg-white text-black font-semibold hover:bg-[#3d2514] hover:text-white transition">
             Inscription
           </button>
         </div>
 
-        {/* Mobile toggle */}
+        {/* Menu Mobile Toggle */}
         <img
           onClick={() => setShowMobileMenu(true)}
           src={menu_icon}
@@ -43,12 +42,13 @@ function Navbar() {
         />
       </div>
 
-      {/* Mobile menu */}
+      {/* Menu Mobile */}
       <div
-        className={`md:hidden fixed top-0 right-0 h-full bg-gradient-to-b from-amber-400 via-amber-500 to-yellow-600 shadow-lg transition-all duration-300 ease-in-out ${
+        className={`md:hidden fixed top-0 right-0 h-full z-50 bg-gradient-to-b from-amber-400 via-amber-500 to-yellow-600 shadow-lg transition-all duration-300 ease-in-out overflow-hidden ${
           showMobileMenu ? "w-3/4" : "w-0"
-        } overflow-hidden z-30`}
+        }`}
       >
+        {/* Bouton fermer */}
         <div className="flex justify-end p-6 cursor-pointer">
           <img
             onClick={() => setShowMobileMenu(false)}
@@ -58,16 +58,13 @@ function Navbar() {
           />
         </div>
 
+        {/* Contenu mobile - uniquement boutons */}
         <div className="flex flex-col items-center gap-10 mt-16 text-center">
-          <p className="text-white text-2xl font-bold leading-snug">
-            🍟 Commandez votre repas en ligne
-          </p>
-
           <div className="flex flex-col gap-4 w-3/4">
-            <button className="w-full px-5 py-3 rounded-full bg-black text-white font-semibold hover:bg-white hover:text-black transition">
+            <button className="w-full px-5 py-3 rounded-full bg-[#3d2514] text-white font-semibold hover:bg-white hover:text-black transition">
               Connexion
             </button>
-            <button className="w-full px-5 py-3 rounded-full bg-white text-black font-semibold hover:bg-black hover:text-white transition">
+            <button className="w-full px-5 py-3 rounded-full bg-white text-black font-semibold hover:bg-[#3d2514] hover:text-white transition">
               Inscription
             </button>
           </div>
