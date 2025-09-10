@@ -33,31 +33,31 @@ function Burger() {
   );
 
   return (
-    <div className="mt-10 container mx-auto px-6 md:px-20 lg:px-32">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="mt-10 px-6 md:px-10 lg:px-16 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
         {/* Colonne gauche */}
         {leftBurger.map((burger) => (
-          <div key={burger.id} className="relative">
+          <div key={burger.id} className="relative w-full">
             <img
               src={burger.img}
               alt={burger.title}
-              className="w-full h-72 md:h-96 object-cover rounded-lg shadow-lg"
+              className="w-full h-80 md:h-[500px] object-cover rounded-lg shadow-lg"
             />
-            <div className="absolute top-2 left-2 bg-amber-600 text-white px-3 py-1 rounded-full shadow-lg">
-              <h3 className="font-bold text-sm md:text-base">{burger.title}</h3>
-              <p className="text-xs md:text-sm">{burger.description}</p>
+            <div className="absolute top-4 left-4 bg-amber-600 text-white px-4 py-2 rounded-lg shadow-lg">
+              <h3 className="font-bold text-base md:text-lg">{burger.title}</h3>
+              <p className="text-sm md:text-base">{burger.description}</p>
             </div>
           </div>
         ))}
 
         {/* Colonne droite */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-3 w-full">
           {rightBurgers.map((burger) => (
-            <div key={burger.id} className="relative">
+            <div key={burger.id} className="relative w-full">
               <img
                 src={burger.img}
                 alt={burger.title}
-                className="w-full h-36 md:h-44 object-cover rounded-lg shadow-lg"
+                className="w-full h-40 md:h-[245px] object-cover rounded-lg shadow-lg"
               />
               <div className="absolute top-2 left-2 bg-amber-600 text-white px-2 py-1 rounded-full shadow-lg">
                 <h3 className="font-bold text-xs md:text-sm">{burger.title}</h3>
